@@ -11,7 +11,7 @@ class Director(models.Model):
         ordering = ['code']
 
     def __str__(self):
-        return self.id,self.code,self.name,self.rating
+        return '{} {} {} {}'.format(self.id,self.code,self.name,self.rating)
 
 class Producer(models.Model):
     code = models.IntegerField()
@@ -22,7 +22,7 @@ class Producer(models.Model):
         ordering = ['code']
 
     def __str__(self):
-        return self.id,self.code,self.name,self.rating
+        return '{} {} {} {}'.format(self.id,self.code,self.name,self.rating)
 
 class Narrative(models.Model):
     code = models.IntegerField()
@@ -33,7 +33,7 @@ class Narrative(models.Model):
         ordering = ['code']
 
     def __str__(self):
-        return self.id,self.code,self.name,self.rating
+        return '{} {} {} {}'.format(self.id,self.code,self.name,self.rating)
 
 class Hero(models.Model):
     code = models.IntegerField()
@@ -44,7 +44,7 @@ class Hero(models.Model):
         ordering = ['code']
 
     def __str__(self):
-        return self.id,self.code,self.name,self.rating
+        return '{} {} {} {}'.format(self.id,self.code,self.name,self.rating)
 
 class Actor(models.Model):
     code = models.IntegerField()
@@ -55,7 +55,7 @@ class Actor(models.Model):
         ordering = ['code']
 
     def __str__(self):
-        return self.id,self.code,self.name,self.rating
+        return '{} {} {} {}'.format(self.id,self.code,self.name,self.rating)
 
 class Song(models.Model):
     code = models.IntegerField()
@@ -66,4 +66,4 @@ class Song(models.Model):
         ordering = ['code']
 
     def __str__(self):
-        return self.id,self.code,self.name,self.rating
+        return '{} {} {} {}'.format(self.id,self.code,self.name,self.rating)

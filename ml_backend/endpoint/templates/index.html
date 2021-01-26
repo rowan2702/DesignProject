@@ -58,7 +58,6 @@
     </div>
   </header><!-- End Header -->
 
-  {% block content %}{% endblock %}
 
   <!-- ======= Hero Section ======= -->
   <section id="hero">
@@ -81,14 +80,15 @@
           <h3><span>Rolling !!</span></h3>
           <br>
 
-          <form>
+          <form action="result.html" method="GET">
+            
             <div class="row">
               <div class="col col-lg-2">
                 <h4>Director</h4>
               </div>
                 <div class="col col-lg-2">
                   <div class="form-group">
-                    <select class="form-control" id="director" >
+                    <select class="form-control" name="director" >
                       <option selected>Select</option>
                       {% for director in directors %}
                       <option>{{ director.name }}</option>
@@ -106,7 +106,7 @@
               </div>
                 <div class="col col-lg-2">
                   <div class="form-group">
-                    <select class="form-control" id="producer" >
+                    <select class="form-control" name="producer" >
                       <option selected>Select</option>
                       {% for producer in producers %}
                       <option>{{ producer.name }}</option>
@@ -124,7 +124,7 @@
               </div>
                 <div class="col col-lg-2">
                   <div class="form-group">
-                    <select class="form-control" id="narrative1" >
+                    <select class="form-control" name="narrative1" >
                       <option selected>Select</option>
                       {% for narrative in narratives %}
                       <option>{{ narrative.name }}</option>
@@ -134,7 +134,7 @@
                 </div>
                 <div class="col col-lg-2">
                   <div class="form-group">
-                    <select class="form-control" id="narrative2" >
+                    <select class="form-control" name="narrative2" >
                       <option selected>Select</option>
                       {% for narrative in narratives %}
                       <option>{{ narrative.name }}</option>
@@ -152,7 +152,7 @@
               </div>
                 <div class="col col-lg-2">
                   <div class="form-group">
-                    <select class="form-control" id="hero1" >
+                    <select class="form-control" name="hero1" >
                       <option selected>Select</option>
                       {% for hero in heroes %}
                       <option>{{ hero.name }}</option>
@@ -162,7 +162,7 @@
                 </div>
                 <div class="col col-lg-2">
                   <div class="form-group">
-                    <select class="form-control" id="hero2" >
+                    <select class="form-control" name="hero2" >
                       <option selected>Select</option>
                       {% for hero in heroes %}
                       <option>{{ hero.name }}</option>
@@ -172,7 +172,7 @@
                 </div>
                 <div class="col col-lg-2">
                   <div class="form-group">
-                    <select class="form-control" id="hero3" >
+                    <select class="form-control" name="hero3" >
                       <option selected>Select</option>
                       {% for hero in heroes %}
                       <option>{{ hero.name }}</option>
@@ -190,7 +190,7 @@
               </div>
                 <div class="col col-lg-2">
                   <div class="form-group">
-                    <select class="form-control" id="actor1" >
+                    <select class="form-control" name="actor1" >
                       <option selected>Select</option>
                       {% for actor in actors %}
                       <option>{{ actor.name }}</option>
@@ -200,7 +200,7 @@
                 </div>
                 <div class="col col-lg-2">
                   <div class="form-group">
-                    <select class="form-control" id="actor2" >
+                    <select class="form-control" name="actor2" >
                       <option selected>Select</option>
                       {% for actor in actors %}
                       <option>{{ actor.name }}</option>
@@ -210,7 +210,7 @@
                 </div>
                 <div class="col col-lg-2">
                   <div class="form-group">
-                    <select class="form-control" id="actor3" >
+                    <select class="form-control" name="actor3" >
                       <option selected>Select</option>
                       {% for actor in actors %}
                       <option>{{ actor.name }}</option>
@@ -220,7 +220,7 @@
                 </div>
                 <div class="col col-lg-2">
                   <div class="form-group">
-                    <select class="form-control" id="actor4" >
+                    <select class="form-control" name="actor4" >
                       <option selected>Select</option>
                       {% for actor in actors %}
                       <option>{{ actor.name }}</option>
@@ -237,7 +237,7 @@
                  </div>
                    <div class="col col-lg-2">
                      <div class="form-group">
-                       <select class="form-control" id="song" >
+                       <select class="form-control" name="song" >
                          <option selected>Select</option>
                          {% for song in songs %}
                          <option>{{ song.name }}</option>
@@ -246,11 +246,16 @@
                      </div>
                    </div>
                 </div>
-          </form>
 
-          <br>
-          
-          <a href="#predict" class="btn btn-outline-danger">Predict</a>
+                <br>
+
+                <div class="form-group row">
+                  <div class="col col-lg-12 ">
+                    <button type="submit" class="btn btn-danger">Predict</button>
+                  </div>
+                </div>
+
+          </form>
       </div>
     </section><!-- End Contact Section -->
 
